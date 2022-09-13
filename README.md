@@ -15,5 +15,12 @@ git push -u origin main
 // 提交到远程仓库
 
 # 从github更新到本地
-git pull origin
+git pull origin  
+
+//如果本地修改了文件，会发生冲突  
+//将本地恢复到上一个commit id，然后再执行上面的指令  
+git reset --hard  
+
+
+
 
