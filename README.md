@@ -6,6 +6,8 @@ git clone https://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@github.com/FsuraK/ros
 
 密码：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
 
+直接用：git clone https://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@github.com/FsuraK/ros.git
+
 # 上传---首先cd ros目录
 git add .  
 // 此处的“.”表示当前目录，如果只添加某些目录，则使用：git add [目录1] [目录2]
