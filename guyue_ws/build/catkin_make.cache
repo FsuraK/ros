@@ -1,0 +1,2 @@
+learing_topic
+-DCMAKE_BUILD_TYPE=RelWithDebInfo -DCATKIN_DEVEL_PREFIX=/home/ubuntu/Desktop/guyue_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/Desktop/guyue_ws/install -G Unix Makefiles
