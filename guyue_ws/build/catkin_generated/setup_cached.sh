@@ -7,5 +7,10 @@
 # new environment variables
 
 # modified environment variables
+export CMAKE_PREFIX_PATH="/home/yy2212/Desktop/ros/guyue_ws/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/yy2212/Desktop/ros/guyue_ws/devel/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/yy2212/Desktop/ros/guyue_ws/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/yy2212/Desktop/ros/guyue_ws/build'
-export ROS_PACKAGE_PATH='/home/ubuntu/Desktop/guyue_ws/src:/home/yy2212/Desktop/ros/guyue_ws/src:/opt/ros/melodic/share'
+export PYTHONPATH="/home/yy2212/Desktop/ros/guyue_ws/devel/lib/python2.7/dist-packages:$PYTHONPATH"
+export ROSLISP_PACKAGE_DIRECTORIES='/home/yy2212/Desktop/ros/guyue_ws/devel/share/common-lisp'
+export ROS_PACKAGE_PATH="/home/ubuntu/Desktop/guyue_ws/src:/home/yy2212/Desktop/ros/guyue_ws/src:$ROS_PACKAGE_PATH"

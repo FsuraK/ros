@@ -10,7 +10,7 @@ int main(int argc,char **argv)
     //biuld node jubing
     ros::NodeHandle n;
 
-    //creat a publisher
+    //creat a publisher 
     ros::Publisher turtle_vel_pub = n.advertise<geometry_msgs::Twist>("/turtle1/cmd_vel",10);
 
     //set frequnce of the circle

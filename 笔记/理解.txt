@@ -1,0 +1,12 @@
+前面无论是给海龟发布Twist消息，还是订阅海龟的位置Pose消息，但这是事先定义好的消息（如：位置），如果需要使用其他消息，比如，海龟的角度等等...需要自己定义，这就是话题消息的存在意义。
+ros::init(argc,argv,"person_publisher");
+其中，"person_publisher"是节点名称，该句初始化告诉rosMaster，向其注册。
+
+ros::NodeHandle n;
+创建句柄，句柄是来管理节点资源的。
+
+ros::Publisher person_info_pub = n.advertise<learing_topic::person>("/person_info",10);
+其中，person_info_pub是发布者，learing_topic::person是发布的消息的数据类型，然后，向/person_info中发布话题，10是队列长度。
+
+
+
