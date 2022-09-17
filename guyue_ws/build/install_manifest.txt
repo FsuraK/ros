@@ -1,9 +1,0 @@
-/home/ubuntu/Desktop/guyue_ws/install/_setup_util.py
-/home/ubuntu/Desktop/guyue_ws/install/env.sh
-/home/ubuntu/Desktop/guyue_ws/install/setup.bash
-/home/ubuntu/Desktop/guyue_ws/install/local_setup.bash
-/home/ubuntu/Desktop/guyue_ws/install/setup.sh
-/home/ubuntu/Desktop/guyue_ws/install/local_setup.sh
-/home/ubuntu/Desktop/guyue_ws/install/setup.zsh
-/home/ubuntu/Desktop/guyue_ws/install/local_setup.zsh
-/home/ubuntu/Desktop/guyue_ws/install/.rosinstall

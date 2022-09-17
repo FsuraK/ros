@@ -7,4 +7,5 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/ubuntu/Desktop/guyue_ws/build'
+export PWD='/home/yy2212/Desktop/ros/guyue_ws/build'
+export ROS_PACKAGE_PATH='/home/ubuntu/Desktop/guyue_ws/src:/home/yy2212/Desktop/ros/guyue_ws/src:/opt/ros/melodic/share'

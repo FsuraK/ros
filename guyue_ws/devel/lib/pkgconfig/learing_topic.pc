@@ -1,4 +1,4 @@
-prefix=/home/ubuntu/Desktop/guyue_ws/devel
+prefix=/home/yy2212/Desktop/ros/guyue_ws/devel
 
 Name: learing_topic
 Description: Description of learing_topic

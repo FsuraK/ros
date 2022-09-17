@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ubuntu/Desktop/guyue_ws/src/learing_topic/src/velocity_publisher.cpp" "/home/ubuntu/Desktop/guyue_ws/build/learing_topic/CMakeFiles/velocity_publisher.dir/src/velocity_publisher.cpp.o"
+  "/home/yy2212/Desktop/ros/guyue_ws/src/learing_topic/src/velocity_publisher.cpp" "/home/yy2212/Desktop/ros/guyue_ws/build/learing_topic/CMakeFiles/velocity_publisher.dir/src/velocity_publisher.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

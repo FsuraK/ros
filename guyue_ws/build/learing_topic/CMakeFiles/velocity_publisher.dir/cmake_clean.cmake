@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/velocity_publisher.dir/src/velocity_publisher.cpp.o"
-  "/home/ubuntu/Desktop/guyue_ws/devel/lib/learing_topic/velocity_publisher.pdb"
-  "/home/ubuntu/Desktop/guyue_ws/devel/lib/learing_topic/velocity_publisher"
+  "/home/yy2212/Desktop/ros/guyue_ws/devel/lib/learing_topic/velocity_publisher.pdb"
+  "/home/yy2212/Desktop/ros/guyue_ws/devel/lib/learing_topic/velocity_publisher"
 )
 
 # Per-language clean rules from dependency scanning.

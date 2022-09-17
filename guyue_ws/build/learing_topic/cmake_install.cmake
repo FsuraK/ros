@@ -1,8 +1,8 @@
-# Install script for directory: /home/ubuntu/Desktop/guyue_ws/src/learing_topic
+# Install script for directory: /home/yy2212/Desktop/ros/guyue_ws/src/learing_topic
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/Desktop/guyue_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/yy2212/Desktop/ros/guyue_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/Desktop/guyue_ws/build/learing_topic/catkin_generated/installspace/learing_topic.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yy2212/Desktop/ros/guyue_ws/build/learing_topic/catkin_generated/installspace/learing_topic.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/learing_topic/cmake" TYPE FILE FILES
-    "/home/ubuntu/Desktop/guyue_ws/build/learing_topic/catkin_generated/installspace/learing_topicConfig.cmake"
-    "/home/ubuntu/Desktop/guyue_ws/build/learing_topic/catkin_generated/installspace/learing_topicConfig-version.cmake"
+    "/home/yy2212/Desktop/ros/guyue_ws/build/learing_topic/catkin_generated/installspace/learing_topicConfig.cmake"
+    "/home/yy2212/Desktop/ros/guyue_ws/build/learing_topic/catkin_generated/installspace/learing_topicConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/learing_topic" TYPE FILE FILES "/home/ubuntu/Desktop/guyue_ws/src/learing_topic/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/learing_topic" TYPE FILE FILES "/home/yy2212/Desktop/ros/guyue_ws/src/learing_topic/package.xml")
 endif()
 

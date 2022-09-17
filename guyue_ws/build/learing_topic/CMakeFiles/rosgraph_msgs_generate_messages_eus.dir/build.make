@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/Desktop/guyue_ws/src
+CMAKE_SOURCE_DIR = /home/yy2212/Desktop/ros/guyue_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/Desktop/guyue_ws/build
+CMAKE_BINARY_DIR = /home/yy2212/Desktop/ros/guyue_ws/build
 
 # Utility rule file for rosgraph_msgs_generate_messages_eus.
 
@@ -63,10 +63,10 @@ learing_topic/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build: rosgraph
 .PHONY : learing_topic/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
 
 learing_topic/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean:
-	cd /home/ubuntu/Desktop/guyue_ws/build/learing_topic && $(CMAKE_COMMAND) -P CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/cmake_clean.cmake
+	cd /home/yy2212/Desktop/ros/guyue_ws/build/learing_topic && $(CMAKE_COMMAND) -P CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/cmake_clean.cmake
 .PHONY : learing_topic/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
 
 learing_topic/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/depend:
-	cd /home/ubuntu/Desktop/guyue_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/Desktop/guyue_ws/src /home/ubuntu/Desktop/guyue_ws/src/learing_topic /home/ubuntu/Desktop/guyue_ws/build /home/ubuntu/Desktop/guyue_ws/build/learing_topic /home/ubuntu/Desktop/guyue_ws/build/learing_topic/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yy2212/Desktop/ros/guyue_ws/src /home/yy2212/Desktop/ros/guyue_ws/src/learing_topic /home/yy2212/Desktop/ros/guyue_ws/build /home/yy2212/Desktop/ros/guyue_ws/build/learing_topic /home/yy2212/Desktop/ros/guyue_ws/build/learing_topic/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : learing_topic/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/depend
 
