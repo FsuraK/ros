@@ -90,6 +90,17 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -100,6 +111,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -112,28 +134,6 @@ install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,6 +166,111 @@ preinstall/fast:
 depend:
 	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+learing_service/CMakeFiles/turtle_command_server.dir/rule:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learing_service/CMakeFiles/turtle_command_server.dir/rule
+.PHONY : learing_service/CMakeFiles/turtle_command_server.dir/rule
+
+# Convenience name for target.
+turtle_command_server: learing_service/CMakeFiles/turtle_command_server.dir/rule
+
+.PHONY : turtle_command_server
+
+# fast build rule for target.
+turtle_command_server/fast:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/turtle_command_server.dir/build.make learing_service/CMakeFiles/turtle_command_server.dir/build
+.PHONY : turtle_command_server/fast
+
+# Convenience name for target.
+learing_service/CMakeFiles/learing_service_genpy.dir/rule:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learing_service/CMakeFiles/learing_service_genpy.dir/rule
+.PHONY : learing_service/CMakeFiles/learing_service_genpy.dir/rule
+
+# Convenience name for target.
+learing_service_genpy: learing_service/CMakeFiles/learing_service_genpy.dir/rule
+
+.PHONY : learing_service_genpy
+
+# fast build rule for target.
+learing_service_genpy/fast:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/learing_service_genpy.dir/build.make learing_service/CMakeFiles/learing_service_genpy.dir/build
+.PHONY : learing_service_genpy/fast
+
+# Convenience name for target.
+learing_service/CMakeFiles/turtle_spawn.dir/rule:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learing_service/CMakeFiles/turtle_spawn.dir/rule
+.PHONY : learing_service/CMakeFiles/turtle_spawn.dir/rule
+
+# Convenience name for target.
+turtle_spawn: learing_service/CMakeFiles/turtle_spawn.dir/rule
+
+.PHONY : turtle_spawn
+
+# fast build rule for target.
+turtle_spawn/fast:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/turtle_spawn.dir/build.make learing_service/CMakeFiles/turtle_spawn.dir/build
+.PHONY : turtle_spawn/fast
+
+# Convenience name for target.
+learing_service/CMakeFiles/learing_service_generate_messages_py.dir/rule:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learing_service/CMakeFiles/learing_service_generate_messages_py.dir/rule
+.PHONY : learing_service/CMakeFiles/learing_service_generate_messages_py.dir/rule
+
+# Convenience name for target.
+learing_service_generate_messages_py: learing_service/CMakeFiles/learing_service_generate_messages_py.dir/rule
+
+.PHONY : learing_service_generate_messages_py
+
+# fast build rule for target.
+learing_service_generate_messages_py/fast:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/learing_service_generate_messages_py.dir/build.make learing_service/CMakeFiles/learing_service_generate_messages_py.dir/build
+.PHONY : learing_service_generate_messages_py/fast
+
+# Convenience name for target.
+learing_service/CMakeFiles/learing_service_gennodejs.dir/rule:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learing_service/CMakeFiles/learing_service_gennodejs.dir/rule
+.PHONY : learing_service/CMakeFiles/learing_service_gennodejs.dir/rule
+
+# Convenience name for target.
+learing_service_gennodejs: learing_service/CMakeFiles/learing_service_gennodejs.dir/rule
+
+.PHONY : learing_service_gennodejs
+
+# fast build rule for target.
+learing_service_gennodejs/fast:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/learing_service_gennodejs.dir/build.make learing_service/CMakeFiles/learing_service_gennodejs.dir/build
+.PHONY : learing_service_gennodejs/fast
+
+# Convenience name for target.
+learing_service/CMakeFiles/learing_service_genlisp.dir/rule:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learing_service/CMakeFiles/learing_service_genlisp.dir/rule
+.PHONY : learing_service/CMakeFiles/learing_service_genlisp.dir/rule
+
+# Convenience name for target.
+learing_service_genlisp: learing_service/CMakeFiles/learing_service_genlisp.dir/rule
+
+.PHONY : learing_service_genlisp
+
+# fast build rule for target.
+learing_service_genlisp/fast:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/learing_service_genlisp.dir/build.make learing_service/CMakeFiles/learing_service_genlisp.dir/build
+.PHONY : learing_service_genlisp/fast
+
+# Convenience name for target.
+learing_service/CMakeFiles/learing_service_generate_messages_lisp.dir/rule:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learing_service/CMakeFiles/learing_service_generate_messages_lisp.dir/rule
+.PHONY : learing_service/CMakeFiles/learing_service_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+learing_service_generate_messages_lisp: learing_service/CMakeFiles/learing_service_generate_messages_lisp.dir/rule
+
+.PHONY : learing_service_generate_messages_lisp
+
+# fast build rule for target.
+learing_service_generate_messages_lisp/fast:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/learing_service_generate_messages_lisp.dir/build.make learing_service/CMakeFiles/learing_service_generate_messages_lisp.dir/build
+.PHONY : learing_service_generate_messages_lisp/fast
 
 # Convenience name for target.
 learing_service/CMakeFiles/roscpp_generate_messages_py.dir/rule:
@@ -258,6 +363,21 @@ roscpp_generate_messages_eus/fast:
 .PHONY : roscpp_generate_messages_eus/fast
 
 # Convenience name for target.
+learing_service/CMakeFiles/learing_service_generate_messages_eus.dir/rule:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learing_service/CMakeFiles/learing_service_generate_messages_eus.dir/rule
+.PHONY : learing_service/CMakeFiles/learing_service_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+learing_service_generate_messages_eus: learing_service/CMakeFiles/learing_service_generate_messages_eus.dir/rule
+
+.PHONY : learing_service_generate_messages_eus
+
+# fast build rule for target.
+learing_service_generate_messages_eus/fast:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/learing_service_generate_messages_eus.dir/build.make learing_service/CMakeFiles/learing_service_generate_messages_eus.dir/build
+.PHONY : learing_service_generate_messages_eus/fast
+
+# Convenience name for target.
 learing_service/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learing_service/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
 .PHONY : learing_service/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
@@ -273,6 +393,36 @@ std_msgs_generate_messages_nodejs/fast:
 .PHONY : std_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
+learing_service/CMakeFiles/learing_service_generate_messages_cpp.dir/rule:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learing_service/CMakeFiles/learing_service_generate_messages_cpp.dir/rule
+.PHONY : learing_service/CMakeFiles/learing_service_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+learing_service_generate_messages_cpp: learing_service/CMakeFiles/learing_service_generate_messages_cpp.dir/rule
+
+.PHONY : learing_service_generate_messages_cpp
+
+# fast build rule for target.
+learing_service_generate_messages_cpp/fast:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/learing_service_generate_messages_cpp.dir/build.make learing_service/CMakeFiles/learing_service_generate_messages_cpp.dir/build
+.PHONY : learing_service_generate_messages_cpp/fast
+
+# Convenience name for target.
+learing_service/CMakeFiles/person_client.dir/rule:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learing_service/CMakeFiles/person_client.dir/rule
+.PHONY : learing_service/CMakeFiles/person_client.dir/rule
+
+# Convenience name for target.
+person_client: learing_service/CMakeFiles/person_client.dir/rule
+
+.PHONY : person_client
+
+# fast build rule for target.
+person_client/fast:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/person_client.dir/build.make learing_service/CMakeFiles/person_client.dir/build
+.PHONY : person_client/fast
+
+# Convenience name for target.
 learing_service/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
 	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learing_service/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 .PHONY : learing_service/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
@@ -286,21 +436,6 @@ rosgraph_msgs_generate_messages_cpp: learing_service/CMakeFiles/rosgraph_msgs_ge
 rosgraph_msgs_generate_messages_cpp/fast:
 	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make learing_service/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-learing_service/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learing_service/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : learing_service/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: learing_service/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make learing_service/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 learing_service/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
@@ -331,6 +466,21 @@ rosgraph_msgs_generate_messages_py: learing_service/CMakeFiles/rosgraph_msgs_gen
 rosgraph_msgs_generate_messages_py/fast:
 	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make learing_service/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+learing_service/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learing_service/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+.PHONY : learing_service/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_cpp: learing_service/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+.PHONY : roscpp_generate_messages_cpp
+
+# fast build rule for target.
+roscpp_generate_messages_cpp/fast:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make learing_service/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+.PHONY : roscpp_generate_messages_cpp/fast
 
 # Convenience name for target.
 learing_service/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
@@ -483,6 +633,36 @@ std_srvs_generate_messages_cpp/fast:
 .PHONY : std_srvs_generate_messages_cpp/fast
 
 # Convenience name for target.
+learing_service/CMakeFiles/person_server.dir/rule:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learing_service/CMakeFiles/person_server.dir/rule
+.PHONY : learing_service/CMakeFiles/person_server.dir/rule
+
+# Convenience name for target.
+person_server: learing_service/CMakeFiles/person_server.dir/rule
+
+.PHONY : person_server
+
+# fast build rule for target.
+person_server/fast:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/person_server.dir/build.make learing_service/CMakeFiles/person_server.dir/build
+.PHONY : person_server/fast
+
+# Convenience name for target.
+learing_service/CMakeFiles/learing_service_gencpp.dir/rule:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learing_service/CMakeFiles/learing_service_gencpp.dir/rule
+.PHONY : learing_service/CMakeFiles/learing_service_gencpp.dir/rule
+
+# Convenience name for target.
+learing_service_gencpp: learing_service/CMakeFiles/learing_service_gencpp.dir/rule
+
+.PHONY : learing_service_gencpp
+
+# fast build rule for target.
+learing_service_gencpp/fast:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/learing_service_gencpp.dir/build.make learing_service/CMakeFiles/learing_service_gencpp.dir/build
+.PHONY : learing_service_gencpp/fast
+
+# Convenience name for target.
 learing_service/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
 	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learing_service/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 .PHONY : learing_service/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
@@ -511,21 +691,6 @@ turtlesim_generate_messages_eus: learing_service/CMakeFiles/turtlesim_generate_m
 turtlesim_generate_messages_eus/fast:
 	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/turtlesim_generate_messages_eus.dir/build.make learing_service/CMakeFiles/turtlesim_generate_messages_eus.dir/build
 .PHONY : turtlesim_generate_messages_eus/fast
-
-# Convenience name for target.
-learing_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule:
-	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learing_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
-.PHONY : learing_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_nodejs: learing_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
-
-.PHONY : std_srvs_generate_messages_nodejs
-
-# fast build rule for target.
-std_srvs_generate_messages_nodejs/fast:
-	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make learing_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
-.PHONY : std_srvs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 learing_service/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
@@ -573,6 +738,36 @@ turtlesim_generate_messages_nodejs/fast:
 .PHONY : turtlesim_generate_messages_nodejs/fast
 
 # Convenience name for target.
+learing_service/CMakeFiles/_learing_service_generate_messages_check_deps_person.dir/rule:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learing_service/CMakeFiles/_learing_service_generate_messages_check_deps_person.dir/rule
+.PHONY : learing_service/CMakeFiles/_learing_service_generate_messages_check_deps_person.dir/rule
+
+# Convenience name for target.
+_learing_service_generate_messages_check_deps_person: learing_service/CMakeFiles/_learing_service_generate_messages_check_deps_person.dir/rule
+
+.PHONY : _learing_service_generate_messages_check_deps_person
+
+# fast build rule for target.
+_learing_service_generate_messages_check_deps_person/fast:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/_learing_service_generate_messages_check_deps_person.dir/build.make learing_service/CMakeFiles/_learing_service_generate_messages_check_deps_person.dir/build
+.PHONY : _learing_service_generate_messages_check_deps_person/fast
+
+# Convenience name for target.
+learing_service/CMakeFiles/learing_service_generate_messages_nodejs.dir/rule:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learing_service/CMakeFiles/learing_service_generate_messages_nodejs.dir/rule
+.PHONY : learing_service/CMakeFiles/learing_service_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+learing_service_generate_messages_nodejs: learing_service/CMakeFiles/learing_service_generate_messages_nodejs.dir/rule
+
+.PHONY : learing_service_generate_messages_nodejs
+
+# fast build rule for target.
+learing_service_generate_messages_nodejs/fast:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/learing_service_generate_messages_nodejs.dir/build.make learing_service/CMakeFiles/learing_service_generate_messages_nodejs.dir/build
+.PHONY : learing_service_generate_messages_nodejs/fast
+
+# Convenience name for target.
 learing_service/CMakeFiles/turtlesim_generate_messages_py.dir/rule:
 	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learing_service/CMakeFiles/turtlesim_generate_messages_py.dir/rule
 .PHONY : learing_service/CMakeFiles/turtlesim_generate_messages_py.dir/rule
@@ -586,21 +781,6 @@ turtlesim_generate_messages_py: learing_service/CMakeFiles/turtlesim_generate_me
 turtlesim_generate_messages_py/fast:
 	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/turtlesim_generate_messages_py.dir/build.make learing_service/CMakeFiles/turtlesim_generate_messages_py.dir/build
 .PHONY : turtlesim_generate_messages_py/fast
-
-# Convenience name for target.
-learing_service/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learing_service/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : learing_service/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: learing_service/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-.PHONY : roscpp_generate_messages_cpp
-
-# fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make learing_service/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
 
 # Convenience name for target.
 learing_service/CMakeFiles/std_srvs_generate_messages_py.dir/rule:
@@ -618,34 +798,118 @@ std_srvs_generate_messages_py/fast:
 .PHONY : std_srvs_generate_messages_py/fast
 
 # Convenience name for target.
-learing_service/CMakeFiles/turtle_spawn.dir/rule:
-	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learing_service/CMakeFiles/turtle_spawn.dir/rule
-.PHONY : learing_service/CMakeFiles/turtle_spawn.dir/rule
+learing_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learing_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
+.PHONY : learing_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-turtle_spawn: learing_service/CMakeFiles/turtle_spawn.dir/rule
+std_srvs_generate_messages_nodejs: learing_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
 
-.PHONY : turtle_spawn
+.PHONY : std_srvs_generate_messages_nodejs
 
 # fast build rule for target.
-turtle_spawn/fast:
-	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/turtle_spawn.dir/build.make learing_service/CMakeFiles/turtle_spawn.dir/build
-.PHONY : turtle_spawn/fast
+std_srvs_generate_messages_nodejs/fast:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make learing_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
+.PHONY : std_srvs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-learing_service/CMakeFiles/turtle_command_server.dir/rule:
-	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learing_service/CMakeFiles/turtle_command_server.dir/rule
-.PHONY : learing_service/CMakeFiles/turtle_command_server.dir/rule
+learing_service/CMakeFiles/learing_service_generate_messages.dir/rule:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learing_service/CMakeFiles/learing_service_generate_messages.dir/rule
+.PHONY : learing_service/CMakeFiles/learing_service_generate_messages.dir/rule
 
 # Convenience name for target.
-turtle_command_server: learing_service/CMakeFiles/turtle_command_server.dir/rule
+learing_service_generate_messages: learing_service/CMakeFiles/learing_service_generate_messages.dir/rule
 
-.PHONY : turtle_command_server
+.PHONY : learing_service_generate_messages
 
 # fast build rule for target.
-turtle_command_server/fast:
-	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/turtle_command_server.dir/build.make learing_service/CMakeFiles/turtle_command_server.dir/build
-.PHONY : turtle_command_server/fast
+learing_service_generate_messages/fast:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/learing_service_generate_messages.dir/build.make learing_service/CMakeFiles/learing_service_generate_messages.dir/build
+.PHONY : learing_service_generate_messages/fast
+
+# Convenience name for target.
+learing_service/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learing_service/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+.PHONY : learing_service/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_lisp: learing_service/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : std_msgs_generate_messages_lisp
+
+# fast build rule for target.
+std_msgs_generate_messages_lisp/fast:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make learing_service/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+.PHONY : std_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+learing_service/CMakeFiles/learing_service_geneus.dir/rule:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learing_service/CMakeFiles/learing_service_geneus.dir/rule
+.PHONY : learing_service/CMakeFiles/learing_service_geneus.dir/rule
+
+# Convenience name for target.
+learing_service_geneus: learing_service/CMakeFiles/learing_service_geneus.dir/rule
+
+.PHONY : learing_service_geneus
+
+# fast build rule for target.
+learing_service_geneus/fast:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/learing_service_geneus.dir/build.make learing_service/CMakeFiles/learing_service_geneus.dir/build
+.PHONY : learing_service_geneus/fast
+
+src/person_client.o: src/person_client.cpp.o
+
+.PHONY : src/person_client.o
+
+# target to build an object file
+src/person_client.cpp.o:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/person_client.dir/build.make learing_service/CMakeFiles/person_client.dir/src/person_client.cpp.o
+.PHONY : src/person_client.cpp.o
+
+src/person_client.i: src/person_client.cpp.i
+
+.PHONY : src/person_client.i
+
+# target to preprocess a source file
+src/person_client.cpp.i:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/person_client.dir/build.make learing_service/CMakeFiles/person_client.dir/src/person_client.cpp.i
+.PHONY : src/person_client.cpp.i
+
+src/person_client.s: src/person_client.cpp.s
+
+.PHONY : src/person_client.s
+
+# target to generate assembly for a file
+src/person_client.cpp.s:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/person_client.dir/build.make learing_service/CMakeFiles/person_client.dir/src/person_client.cpp.s
+.PHONY : src/person_client.cpp.s
+
+src/person_server.o: src/person_server.cpp.o
+
+.PHONY : src/person_server.o
+
+# target to build an object file
+src/person_server.cpp.o:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/person_server.dir/build.make learing_service/CMakeFiles/person_server.dir/src/person_server.cpp.o
+.PHONY : src/person_server.cpp.o
+
+src/person_server.i: src/person_server.cpp.i
+
+.PHONY : src/person_server.i
+
+# target to preprocess a source file
+src/person_server.cpp.i:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/person_server.dir/build.make learing_service/CMakeFiles/person_server.dir/src/person_server.cpp.i
+.PHONY : src/person_server.cpp.i
+
+src/person_server.s: src/person_server.cpp.s
+
+.PHONY : src/person_server.s
+
+# target to generate assembly for a file
+src/person_server.cpp.s:
+	cd /home/yy2212/Desktop/ros/guyue_ws/build && $(MAKE) -f learing_service/CMakeFiles/person_server.dir/build.make learing_service/CMakeFiles/person_server.dir/src/person_server.cpp.s
+.PHONY : src/person_server.cpp.s
 
 src/turtle_command_server.o: src/turtle_command_server.cpp.o
 
@@ -709,43 +973,63 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... install"
-	@echo "... roscpp_generate_messages_py"
 	@echo "... list_install_components"
+	@echo "... test"
+	@echo "... turtle_command_server"
+	@echo "... learing_service_genpy"
+	@echo "... turtle_spawn"
+	@echo "... learing_service_generate_messages_py"
+	@echo "... learing_service_gennodejs"
+	@echo "... learing_service_genlisp"
+	@echo "... learing_service_generate_messages_lisp"
+	@echo "... roscpp_generate_messages_py"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... std_srvs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_eus"
+	@echo "... edit_cache"
+	@echo "... learing_service_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_nodejs"
+	@echo "... learing_service_generate_messages_cpp"
+	@echo "... person_client"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... rebuild_cache"
+	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_nodejs"
-	@echo "... edit_cache"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... install/local"
 	@echo "... std_srvs_generate_messages_eus"
-	@echo "... test"
 	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... turtlesim_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... std_srvs_generate_messages_cpp"
+	@echo "... person_server"
+	@echo "... learing_service_gencpp"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... turtlesim_generate_messages_eus"
-	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... turtlesim_generate_messages_lisp"
 	@echo "... turtlesim_generate_messages_nodejs"
+	@echo "... _learing_service_generate_messages_check_deps_person"
+	@echo "... learing_service_generate_messages_nodejs"
 	@echo "... turtlesim_generate_messages_py"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... rebuild_cache"
 	@echo "... std_srvs_generate_messages_py"
-	@echo "... turtle_spawn"
-	@echo "... turtle_command_server"
+	@echo "... std_srvs_generate_messages_nodejs"
+	@echo "... learing_service_generate_messages"
+	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... learing_service_geneus"
+	@echo "... src/person_client.o"
+	@echo "... src/person_client.i"
+	@echo "... src/person_client.s"
+	@echo "... src/person_server.o"
+	@echo "... src/person_server.i"
+	@echo "... src/person_server.s"
 	@echo "... src/turtle_command_server.o"
 	@echo "... src/turtle_command_server.i"
 	@echo "... src/turtle_command_server.s"
