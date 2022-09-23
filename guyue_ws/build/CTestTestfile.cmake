@@ -5,5 +5,8 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
+subdirs("learing_launch")
+subdirs("metapkg")
+subdirs("learing_parameter")
 subdirs("learing_service")
 subdirs("learing_topic")

@@ -9,6 +9,14 @@ ros::NodeHandle n
 ros::Publisher person_info_pub = n.advertise<learing_topic::person>("/person_info",10,latch：可选)
 其中，person_info_pub是发布者，learing_topic::person是发布的消息的数据类型，然后，向/person_info中发布话题，10是队列长度。latch是可选当，bool类型，默认为false，当为true时，表示:保留publisher发布的最后一条消息/数据，每当下一个订阅者订阅到发布者时，会将这条数据发送给订阅者，任意一个新连接的订阅者，都会接收到这个数据。
 
+自定义头文件：
+在include后会有个/的文件夹，右键新建.h文件，此外，如果其他cpp文件调用了此头文件，还需要在cmakelist中如下位置，将include解除注释：
+inlude_directories(
+include
+  ${catkin_INCLUDE_DIRS}
+)
+
+设计源文件：赵虚左 p143
 
 
 
