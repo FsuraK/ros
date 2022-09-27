@@ -10,5 +10,9 @@
 "topic" ---> /xxx/topic 私有
 "yyy/topic" ---> "/xxx/yyy/topic" 相对
 "/topic" ---> "/topic" 全局
-4. 
+4. 坐标msg信息：  
+在坐标转换中常用的：geometry_msg/TransformStamped和geometry_msg/PointStamped
+前者传输坐标系相关位置信息，后者用于传输某个坐标系内坐标点的信息。
+
+
 

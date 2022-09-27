@@ -41,18 +41,3 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/metapkg" TYPE FILE FILES "/home/yy2212/Desktop/ros/guyue_ws/src/metapkg/package.xml")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yy2212/Desktop/ros/guyue_ws/build/metapkg/catkin_generated/installspace/metapkg.pc")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/metapkg/cmake" TYPE FILE FILES
-    "/home/yy2212/Desktop/ros/guyue_ws/build/metapkg/catkin_generated/installspace/metapkgConfig.cmake"
-    "/home/yy2212/Desktop/ros/guyue_ws/build/metapkg/catkin_generated/installspace/metapkgConfig-version.cmake"
-    )
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/metapkg" TYPE FILE FILES "/home/yy2212/Desktop/ros/guyue_ws/src/metapkg/package.xml")
-endif()
-
