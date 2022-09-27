@@ -1,4 +1,9 @@
-<launch>
-  <node pkg="learing_topic" type="person_subscriber" name="talker" output="screen" />
-  <node pkg="learing_topic" type="person_publisher" name="listener" output="screen" />
+<launch deprecated="warning!">
+  <param name = "param_a" type="int" value="100" />
+
+  <node pkg="turtlesim" type="turtlesim_node" name="my_turtle" output="screen"  >
+   <param name = "param_b" type="double" value = "3.14" />
+  </node>
+  <node pkg="turtlesim" type="turtle_teleop_key" name="my_key" output="screen" />
 </launch>
+
