@@ -158,3 +158,11 @@
 /home/yy2212/Desktop/ros/guyue_ws/build/learing_topic/CMakeFiles/velocity_publisher.dir
 /home/yy2212/Desktop/ros/guyue_ws/build/learing_topic/CMakeFiles/list_install_components.dir
 /home/yy2212/Desktop/ros/guyue_ws/build/learing_topic/CMakeFiles/person_subscriber.dir
+/home/yy2212/Desktop/ros/guyue_ws/build/tf02_dynamic/CMakeFiles/install/strip.dir
+/home/yy2212/Desktop/ros/guyue_ws/build/tf02_dynamic/CMakeFiles/install/local.dir
+/home/yy2212/Desktop/ros/guyue_ws/build/tf02_dynamic/CMakeFiles/test.dir
+/home/yy2212/Desktop/ros/guyue_ws/build/tf02_dynamic/CMakeFiles/list_install_components.dir
+/home/yy2212/Desktop/ros/guyue_ws/build/tf02_dynamic/CMakeFiles/tf_dynamic_pub.dir
+/home/yy2212/Desktop/ros/guyue_ws/build/tf02_dynamic/CMakeFiles/edit_cache.dir
+/home/yy2212/Desktop/ros/guyue_ws/build/tf02_dynamic/CMakeFiles/rebuild_cache.dir
+/home/yy2212/Desktop/ros/guyue_ws/build/tf02_dynamic/CMakeFiles/install.dir

@@ -1,2 +1,2 @@
-learing_launch:learing_parameter:learing_service:learing_topic:metapkg:tf01_static
--DCATKIN_DEVEL_PREFIX=/home/yy2212/Desktop/ros/guyue_ws/devel -DCMAKE_INSTALL_PREFIX=/home/yy2212/Desktop/ros/guyue_ws/install -G Unix Makefiles
+learing_launch:learing_parameter:learing_service:learing_topic:metapkg:tf01_static:tf02_dynamic
+-DCMAKE_BUILD_TYPE=RelWithDebInfo -DCATKIN_DEVEL_PREFIX=/home/yy2212/Desktop/ros/guyue_ws/devel -DCMAKE_INSTALL_PREFIX=/home/yy2212/Desktop/ros/guyue_ws/install -G Unix Makefiles

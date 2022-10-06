@@ -13,6 +13,10 @@
 4. 坐标msg信息：  
 在坐标转换中常用的：geometry_msg/TransformStamped和geometry_msg/PointStamped
 前者传输坐标系相关位置信息，后者用于传输某个坐标系内坐标点的信息。
+静态坐标信息，除了按照publisher和subscriber创建cpp文件，还可以直接使用终端命令（更推荐）。
+roscore
+rosrun tf2_ros staticransform_publisher 0.1 0.0 0.3 0.0 0.0 0.0 /base_link /camera
+详细见5.1.2静态坐标变幻补充1
 
 
 

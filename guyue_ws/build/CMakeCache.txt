@@ -394,7 +394,7 @@ learing_topic_BINARY_DIR:STATIC=/home/yy2212/Desktop/ros/guyue_ws/build/learing_
 learing_topic_SOURCE_DIR:STATIC=/home/yy2212/Desktop/ros/guyue_ws/src/learing_topic
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/melodic/lib/libxmlrpcpp.so
+lib:FILEPATH=/opt/ros/melodic/lib/libmessage_filters.so
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/melodic/share/message_filters/cmake
@@ -446,6 +446,12 @@ tf01_static_BINARY_DIR:STATIC=/home/yy2212/Desktop/ros/guyue_ws/build/tf01_stati
 
 //Value Computed by CMake
 tf01_static_SOURCE_DIR:STATIC=/home/yy2212/Desktop/ros/guyue_ws/src/tf01_static
+
+//Value Computed by CMake
+tf02_dynamic_BINARY_DIR:STATIC=/home/yy2212/Desktop/ros/guyue_ws/build/tf02_dynamic
+
+//Value Computed by CMake
+tf02_dynamic_SOURCE_DIR:STATIC=/home/yy2212/Desktop/ros/guyue_ws/src/tf02_dynamic
 
 //The directory containing a CMake configuration file for tf2.
 tf2_DIR:PATH=/opt/ros/melodic/share/tf2/cmake
@@ -578,7 +584,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=10
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=11
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
