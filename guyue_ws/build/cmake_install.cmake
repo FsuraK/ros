@@ -138,6 +138,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/yy2212/Desktop/ros/guyue_ws/build/learing_service/cmake_install.cmake")
   include("/home/yy2212/Desktop/ros/guyue_ws/build/learing_topic/cmake_install.cmake")
   include("/home/yy2212/Desktop/ros/guyue_ws/build/tf02_dynamic/cmake_install.cmake")
+  include("/home/yy2212/Desktop/ros/guyue_ws/build/urdf01_rviz/cmake_install.cmake")
 
 endif()
 

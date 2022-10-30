@@ -166,3 +166,11 @@
 /home/yy2212/Desktop/ros/guyue_ws/build/tf02_dynamic/CMakeFiles/edit_cache.dir
 /home/yy2212/Desktop/ros/guyue_ws/build/tf02_dynamic/CMakeFiles/rebuild_cache.dir
 /home/yy2212/Desktop/ros/guyue_ws/build/tf02_dynamic/CMakeFiles/install.dir
+/home/yy2212/Desktop/ros/guyue_ws/build/urdf01_rviz/CMakeFiles/install/strip.dir
+/home/yy2212/Desktop/ros/guyue_ws/build/urdf01_rviz/CMakeFiles/install/local.dir
+/home/yy2212/Desktop/ros/guyue_ws/build/urdf01_rviz/CMakeFiles/test.dir
+/home/yy2212/Desktop/ros/guyue_ws/build/urdf01_rviz/CMakeFiles/list_install_components.dir
+/home/yy2212/Desktop/ros/guyue_ws/build/urdf01_rviz/CMakeFiles/urdf01_rviz_xacro_generated_to_devel_space_.dir
+/home/yy2212/Desktop/ros/guyue_ws/build/urdf01_rviz/CMakeFiles/edit_cache.dir
+/home/yy2212/Desktop/ros/guyue_ws/build/urdf01_rviz/CMakeFiles/rebuild_cache.dir
+/home/yy2212/Desktop/ros/guyue_ws/build/urdf01_rviz/CMakeFiles/install.dir
